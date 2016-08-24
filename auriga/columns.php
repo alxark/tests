@@ -18,7 +18,14 @@ function columns($limit, $cols) {
     for($r = 0; $r < $rows; $r++) {
         $stack = [];
         for ($c = 0; $c < $cols; $c++) {
-            $stack[] = $r + ($rows * $c) + (($c > $limit % $cols) ? 0 : 1);
+            if($limit % $cols == 0 ) {
+                $columnOffset = $rows * $c;
+            } else {
+                $fullCols = ($limit % $cols <= $c) ? $limit % $cols : $c;
+                $partialCols = $c - $fullCols;
+                $columnOffset = $fullCols * $rows + $partialCols * ($rows - 1);
+            }
+            $stack[] =  1 + $columnOffset + $r;
         }
 
         $colsInRow = ($r == $rows - 1 && $limit % $cols != 0) ? $limit % $cols : $cols;
