@@ -1,0 +1,9 @@
+language: php
+php:
+  - "7.0"
+
+install:
+  - cd exn && composer install
+
+
+script: echo "OK"

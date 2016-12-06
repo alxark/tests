@@ -1,0 +1,32 @@
+{
+    "name": "alxark/exn-backend",
+    "description": "Test backend for some company",
+    "keywords": [
+        "yii2",
+        "api",
+        "useless"
+    ],
+    "type": "project",
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*",
+        "yiisoft/yii2-bootstrap": "*",
+        "yiisoft/yii2-swiftmailer": "*",
+        "guzzlehttp/guzzle": "@stable"
+    },
+    "autoload": {
+        "psr-0": {
+            "api": "./backend"
+        }
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "*",
+        "yiisoft/yii2-gii": "*",
+        "phpunit/php-invoker": "*",
+        "phpunit/phpunit-selenium": "*",
+        "phpunit/phpunit-story": "*",
+        "phpunit/dbunit": "*",
+        "phpunit/phpunit": "*"
+    }
+}
